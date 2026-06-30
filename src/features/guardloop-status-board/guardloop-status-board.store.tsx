@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { fixtureStatusItems } from '../../__fixtures__/guardloop-status-board.fixture';
 import { loadStatusItems, saveStatusItems } from './guardloop-status-board.repo';
 import type { ActivePanel, GuardloopStatusBoardState, StatusItem, StorageStatus } from './guardloop-status-board.types';
@@ -22,7 +22,7 @@ export function GuardloopStatusBoardProvider({ children }: { children: ReactNode
   const [storageStatus, setStorageStatus] = useState<StorageStatus>('idle');
   const [lastError, setLastError] = useState<string | null>(null);
 
-  const refreshStatus = () => {
+  const refreshStatus = useCallback(() => {
     setStorageStatus('loading');
     setLastError(null);
     try {
@@ -34,11 +34,11 @@ export function GuardloopStatusBoardProvider({ children }: { children: ReactNode
       setStorageStatus('error');
       setLastError(err instanceof Error ? err.message : 'Failed to load status items');
     }
-  };
+  }, []);
 
   useEffect(() => {
     refreshStatus();
-  }, []);
+  }, [refreshStatus]);
 
   useEffect(() => {
     if (storageStatus === 'ready') {
@@ -50,6 +50,15 @@ export function GuardloopStatusBoardProvider({ children }: { children: ReactNode
     }
   }, [items, storageStatus]);
 
+  const actions = useMemo<GuardloopStatusBoardActions>(
+    () => ({
+      refreshStatus,
+      selectItem: setSelectedItemId,
+      setActivePanel,
+    }),
+    [refreshStatus],
+  );
+
   const value = useMemo<GuardloopStatusBoardContextValue>(
     () => ({
       items,
@@ -58,13 +67,9 @@ export function GuardloopStatusBoardProvider({ children }: { children: ReactNode
       storageStatus,
       lastError,
       itemCount: items.length,
-      actions: {
-        refreshStatus,
-        selectItem: setSelectedItemId,
-        setActivePanel,
-      },
+      actions,
     }),
-    [items, selectedItemId, activePanel, storageStatus, lastError],
+    [items, selectedItemId, activePanel, storageStatus, lastError, actions],
   );
 
   return <GuardloopStatusBoardContext.Provider value={value}>{children}</GuardloopStatusBoardContext.Provider>;
