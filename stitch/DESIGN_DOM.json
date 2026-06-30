@@ -1,0 +1,130 @@
+{
+  "generatedAt": "2026-06-30T08:20:57.549Z",
+  "screenCount": 1,
+  "screens": {
+    "81b671e9aef74b7783c46a7e76dc296d": {
+      "screenId": "81b671e9aef74b7783c46a7e76dc296d",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "flex",
+            "justify-between",
+            "items-center",
+            "w-full",
+            "px-margin",
+            "py-md",
+            "border-b",
+            "border-outline-variant",
+            "bg-surface-container-lowest"
+          ],
+          "childCount": 3
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "refresh",
+          "classes": [
+            "bg-primary",
+            "text-on-primary",
+            "font-body-sm",
+            "text-body-sm",
+            "px-md",
+            "py-[6px]",
+            "rounded",
+            "flex",
+            "items-center",
+            "gap-xs",
+            "hover:bg-surface-tint",
+            "transition-colors",
+            "active:scale-95",
+            "duration-100"
+          ],
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "shield",
+        "refresh"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "inverse-primary": "#bec6e0",
+        "surface-bright": "#f8f9ff",
+        "inverse-on-surface": "#eaf1ff",
+        "on-error": "#ffffff",
+        "on-surface-variant": "#45464d",
+        "on-primary-container": "#7c839b",
+        "on-primary-fixed-variant": "#3f465c",
+        "surface-variant": "#d3e4fe",
+        "secondary-fixed-dim": "#4edea3",
+        "inverse-surface": "#213145",
+        "primary-fixed": "#dae2fd",
+        "on-secondary": "#ffffff",
+        "on-primary-fixed": "#131b2e",
+        "primary-container": "#131b2e",
+        "on-error-container": "#93000a",
+        "on-tertiary-container": "#b87500",
+        "background": "#f8f9ff",
+        "surface-container-highest": "#d3e4fe",
+        "surface-tint": "#565e74",
+        "secondary": "#006c49",
+        "on-surface": "#0b1c30",
+        "error": "#ba1a1a",
+        "tertiary": "#000000",
+        "on-tertiary-fixed-variant": "#653e00",
+        "on-secondary-fixed": "#002113",
+        "surface-dim": "#cbdbf5",
+        "tertiary-container": "#2a1700",
+        "primary-fixed-dim": "#bec6e0",
+        "outline": "#76777d",
+        "secondary-fixed": "#6ffbbe",
+        "tertiary-fixed": "#ffddb8",
+        "surface-container": "#e5eeff",
+        "on-tertiary-fixed": "#2a1700",
+        "on-background": "#0b1c30",
+        "error-container": "#ffdad6",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "outline-variant": "#c6c6cd",
+        "surface-container-high": "#dce9ff",
+        "tertiary-fixed-dim": "#ffb95f",
+        "surface": "#f8f9ff",
+        "on-secondary-container": "#00714d",
+        "on-tertiary": "#ffffff",
+        "secondary-container": "#6cf8bb",
+        "surface-container-low": "#eff4ff",
+        "on-secondary-fixed-variant": "#005236",
+        "primary": "#000000"
+      },
+      "fonts": [
+        "Inter",
+        "JetBrains Mono",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "refresh",
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [],
+      "title": "Status Utility - GuardLoop Status Board"
+    }
+  }
+}

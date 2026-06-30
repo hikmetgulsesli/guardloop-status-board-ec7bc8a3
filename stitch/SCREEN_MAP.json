@@ -1,0 +1,11 @@
+[
+  {
+    "screenId": "81b671e9aef74b7783c46a7e76dc296d",
+    "name": "Status Utility - GuardLoop Status Board",
+    "type": "app-screen",
+    "description": "Status Utility - GuardLoop Status Board screen",
+    "surfaceIds": [
+      "SURF_STATUS_UTILITY"
+    ]
+  }
+]
