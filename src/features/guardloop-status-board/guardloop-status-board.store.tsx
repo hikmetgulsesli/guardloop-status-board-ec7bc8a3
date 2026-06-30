@@ -56,7 +56,7 @@ export function GuardloopStatusBoardProvider({ children }: { children: ReactNode
       selectItem: setSelectedItemId,
       setActivePanel,
     }),
-    [refreshStatus, setSelectedItemId, setActivePanel],
+    [refreshStatus],
   );
 
   const value = useMemo<GuardloopStatusBoardContextValue>(
