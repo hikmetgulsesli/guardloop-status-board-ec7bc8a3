@@ -1,0 +1,27 @@
+[
+  {
+    "screenId": "81b671e9aef74b7783c46a7e76dc296d",
+    "screenTitle": "Status Utility - GuardLoop Status Board",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "refresh",
+        "line": 118
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "refresh",
+        "line": 118
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 1,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
