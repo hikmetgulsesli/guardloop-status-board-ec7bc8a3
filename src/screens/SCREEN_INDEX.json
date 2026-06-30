@@ -1,0 +1,19 @@
+[
+  {
+    "screenId": "81b671e9aef74b7783c46a7e76dc296d",
+    "title": "Status Utility - GuardLoop Status Board",
+    "componentName": "StatusUtilityGuardloopStatusBoard",
+    "file": "src/screens/StatusUtilityGuardloopStatusBoard.tsx",
+    "buttons": 1,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "refresh-1",
+        "kind": "button",
+        "label": "Refresh",
+        "index": 0
+      }
+    ]
+  }
+]
